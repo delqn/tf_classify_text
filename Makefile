@@ -24,3 +24,7 @@ classify:
 lint:
 	pycodestyle movie_sentiment
 	pylint --rcfile=.pylintrc movie_sentiment
+
+.PHONY: dos2unix
+dos2unix:
+	find . -name "*.py" -exec dos2unix {} \;
