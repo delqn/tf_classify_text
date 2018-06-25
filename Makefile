@@ -22,5 +22,5 @@ classify:
 
 .PHONY: lint
 lint:
-	pycodestyle classify.py
-	pylint --rcfile=.pylintrc classify.py
+	pycodestyle movie_sentiment
+	pylint --rcfile=.pylintrc movie_sentiment
