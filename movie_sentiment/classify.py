@@ -87,7 +87,7 @@ def classify(estimator_, classify_input_fn, train_input_fn, sentences_movies):
         print_res(train_and_evaluate_with_module(tfhub_module, train))
 
 
-def main():
+def run():
     train_df, test_df = get_train_test_datasets()
     estimator = get_estimator(train_df=train_df, test_df=test_df)
     print_estimator_accuracy(estimator, train_df=train_df, test_df=test_df)
@@ -99,7 +99,3 @@ def main():
         train_df, train_df['polarity'], num_epochs=None, shuffle=True)
 
     classify(estimator, sentences_movies=sentences_movies, classify_input_fn=input_fn, train_input_fn=train_input_fn)
-
-
-if __name__ == '__main__':
-    main()

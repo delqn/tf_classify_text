@@ -1,6 +1,9 @@
 import os
 import re
 
+import pandas as pd
+import tensorflow as tf
+
 
 def load_as_dataframe(directory):
     data = {

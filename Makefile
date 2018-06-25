@@ -18,7 +18,7 @@ aclImdb_v1.tar.gz:
 
 .PHONY:
 classify:
-	classify.py
+	./run.py
 
 .PHONY: lint
 lint:

@@ -1,8 +1,8 @@
+import tensorflow as tf
+
+
 def print_estimator_accuracy(estimator, train_df, test_df):
     """Training input on the whole training set with no limit on training epochs."""
-    train_input_fn = tf.estimator.inputs.pandas_input_fn(
-        train_df, train_df['polarity'], num_epochs=None, shuffle=True)
-
     # Prediction on the whole training set.
     predict_train_input_fn = tf.estimator.inputs.pandas_input_fn(
         train_df, train_df['polarity'], shuffle=False)
