@@ -1,0 +1,5 @@
+# Install the latest Tensorflow version.
+tensorflow>=1.7
+# Install TF-Hub.
+tensorflow-hub
+seaborn
