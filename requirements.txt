@@ -3,3 +3,6 @@ tensorflow>=1.7
 # Install TF-Hub.
 tensorflow-hub
 seaborn
+pep8==1.7.1
+pylint==1.9.2
+pycodestyle==2.4.0
