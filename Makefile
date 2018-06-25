@@ -22,5 +22,5 @@ classify:
 
 .PHONY: lint
 lint:
-	pycodestyle *.py
-	pylint --rcfile=.pylintrc *.py
+	pycodestyle classify.py
+	pylint --rcfile=.pylintrc classify.py
