@@ -217,12 +217,16 @@ def hacked_out_2():
       estimator.train(input_fn=train_input_fn, steps=1000)
       return estimator
 
-    print_res(train_and_evaluate_with_module("https://tfhub.dev/google/nnlm-en-dim128/1"))
-    print_res(train_and_evaluate_with_module("https://tfhub.dev/google/nnlm-en-dim128/1", True))
-    print_res(train_and_evaluate_with_module("https://tfhub.dev/google/random-nnlm-en-dim128/1"))
-    print_res(train_and_evaluate_with_module("https://tfhub.dev/google/random-nnlm-en-dim128/1", True))
+    tf_modules = [
+        ("https://tfhub.dev/google/nnlm-en-dim128/1", False),
+        ("https://tfhub.dev/google/nnlm-en-dim128/1", True),
+        ("https://tfhub.dev/google/random-nnlm-en-dim128/1", False),
+        ("https://tfhub.dev/google/random-nnlm-en-dim128/1", True),
+    ]
+    for tfhub_module, train in tf_modules:
+        print('Running w/ module {}; trained={}'.format(tfhub_module, train))
+        print_res(train_and_evaluate_with_module(tfhub_module, train))
 
 
 if __name__ == '__main__':
-    hacked_out_1(get_estimator(*train()))
     hacked_out_2(get_estimator(*train()))
